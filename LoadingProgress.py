@@ -3,14 +3,14 @@ from colorama import Fore
 
 
 
-def loadingBar(progress, total):
+def loadingProgress(progress, total):
 
     pourcentage = progress/total * 50 #pour que le chargement reste visible dans une petite console
     barreProgression = ""
     loaded = "="*int(pourcentage)
-    stillDoing = "-"*(50-int(pourcentage))
+    toDo = "-"*(50-int(pourcentage))
 
-    barreProgression = "[" + loaded + stillDoing + "]"
+    barreProgression = "[" + loaded + toDo + "]"
     
     if progress!=total:
         print( Fore.YELLOW +  f"\r{barreProgression}" + Fore.RESET + f"   {pourcentage*2:.1f} %", end="")
