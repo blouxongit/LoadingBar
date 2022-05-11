@@ -19,3 +19,14 @@ def loadingProgress(progress, total):
         print( Fore.GREEN + f"\r{barreProgression}" + Fore.RESET + f"   {pourcentage*2:.1f} %")
         Fore.RESET
 
+
+def main():
+
+    L = [x for x in range(10000,12000)]
+    for i,x in enumerate(L):
+        ans = math.factorial(x)
+        loadingProgress(i+1,len(L))
+
+
+if __name__ == '__main__':
+    main()
